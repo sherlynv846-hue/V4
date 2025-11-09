@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2nd Anniversary Adventure</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="intro" class="screen">
+    <div class="intro-card">
+      <h1 class="title">2nd Anniversary Adventure</h1>
+      <p class="subtitle">Collect the 8 light-blue shards in an enchanted forest.</p>
+      <div class="splash">
+        <img src="assets/splash_sprites.png" alt="Characters and Duck" />
+      </div>
+      <div class="controls">
+        <p><strong>Controls</strong>: ← → or A D to move • Space to jump • Q to quack • P to pause</p>
+      </div>
+      <button id="startBtn" class="btn">Start</button>
+    </div>
+  </div>
+
+  <div id="game" class="screen hidden">
+    <div id="story" class="hidden overlay">
+      <div class="story-card">
+        <p id="storyText"></p>
+        <button id="storySkip" class="btn">Start Adventure</button>
+      </div>
+    </div>
+    <canvas id="gameCanvas" width="960" height="540"></canvas>
+    <div id="hud">
+      <button id="muteBtn" class="btn small" title="Toggle music & sounds">🔊</button>
+      <button id="pauseBtn" class="btn small" title="Pause (P)">⏸</button>
+      <span id="shardCount">Shards: 0 / 8</span>
+      <span id="hint">Tip: The duck follows you and points to nearby shards!</span>
+    </div>
+    <div id="pause" class="hidden overlay"><h2>Paused</h2><p>Press <b>P</b> or click Resume.</p><button id="resumeBtn" class="btn">Resume</button></div>
+    <div id="portalHint" class="hidden overlay"><h3>Portal Unlocked</h3><p>Step into the glowing arch →</p></div>
+    <div id="victory" class="hidden overlay">
+      <h2>All shards collected! ✨</h2>
+      <p>Happy 2nd Anniversary! Press <b>R</b> to play again.</p>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
